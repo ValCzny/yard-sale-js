@@ -1,3 +1,4 @@
+/*Generales*/
 :root{
     --white: #FFFFFF;
     --black: #000000;
@@ -16,6 +17,7 @@ body{
     display: none;
 }
 
+/*Navbar (general)*/
 nav{
     display: flex;
     justify-content: space-between;
@@ -78,6 +80,7 @@ a:hover{
     align-items: center;
 }
 
+/*Desktop Menu*/
 .desktop-menu{
     position: absolute;
     top: 60px;
@@ -115,11 +118,50 @@ a:hover{
     display: inline-block;
 }
 
+/*Mobile Menu*/
+.mobile-menu{
+    position: absolute;
+    top: 60px;
+    padding: 24px;
+}
+.mobile-menu a{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+}
+.mobile-menu ul{
+    padding: 0;
+    margin: 24px 0 0;
+    list-style: none;
+}
+.mobile-menu ul:nth-child(1){
+    border-bottom: 1px solid var(--very-light-pink);
+}
+.mobile-menu ul li{
+    margin-bottom: 24px;
+}
+.email{
+    font-size: var(--sm);
+    font-weight: 300 !important;
+}
+.sign-out{
+    color: var(--hospital-green) !important;
+    font-size: var(--sm);
+}
+
 @media (max-width:640px){
     .menu{
         display: block;
     }
     .navbar-left ul, .navbar-email{
+        display: none;
+    }
+    .desktop-menu{
+        display: none;
+    }
+}
+@media (min-width: 641px) {
+    .mobile-menu{
         display: none;
     }
 }
